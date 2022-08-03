@@ -1,14 +1,20 @@
 class Cart {
-  constructor(cartItems) {
-    this.cartItems;
+  constructor() {
+    this.cartItems = [];
     this.cartElement;
+    this.count = 0;
   }
   addCartItem(product) {
-    if (!this.cartItems) {
-      this.cartItems = [product];
+    let existingItems = this.cartItems.filter(
+      (item) => item.productId === product.productId
+    );
+    if (existingItems.length) {
+      let index = this.cartItems.indexOf(existingItems[0]);
+      this.cartItems[index].addOne();
+    } else {
+      this.cartItems.push(product);
     }
-    this.cartItems.push(product);
-    console.log(this.cartItems);
+    console.log(this)
   }
   get cartItemArray() {
     return this.cartItems;

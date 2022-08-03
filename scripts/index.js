@@ -11,7 +11,6 @@ function renderBestSellers() {
       description,
       price,
       image,
-      currentUserCart.addCartItem
     );
     let _element = _product.productPreviewElement;
     listElement.appendChild(_element);
