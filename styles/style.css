@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --textPrim: black;
+  --shadowLvl1: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  --productCardBg: rgb(82, 99, 82);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+  box-shadow: var(--shadowLvl1);
+}
+
+.navigation a {
+  color: var(--textPrim);
+  font-weight: 700;
+}
+
+.navigation ul {
+  display: flex;
+  list-style-type: none;
+  gap: 64px;
+}
+
+.best-sellers {
+  padding: 64px;
+}
+
+#bs-product-list {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.best-seller-product {
+  background-color: var(--productCardBg);
+  color: white;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: var(--shadowLvl1);
+  width: 33%;
+  min-width: 200px;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.best-seller-product h1 {
+  margin-bottom: 8px;
+}
+
+.best-seller-product b {
+  display: block;
+  font-size: 1.5em;
+}
+
+.best-seller-product button {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 16px;
+  font-size: 1.5em;
+}
+
+.best-seller-product-img {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+  object-position: 50% 100%;
+}
