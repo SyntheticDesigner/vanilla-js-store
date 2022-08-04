@@ -10,8 +10,10 @@ class Cart {
       );
 
       if (filteredArray.length) {
-        const index = this.cartItems.indexOf({ id: product.id });
-        console.log(index);
+        const index = this.cartItems.indexOf(filteredArray[0]);
+        //get the index from the cartItems that matches the filteredItem
+        this.cartItems[index].addOne();
+        //use the index to access the product in the carItems and the addOne method for that product
       } else {
         this.cartItems.push(product);
       }
