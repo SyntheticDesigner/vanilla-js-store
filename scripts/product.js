@@ -1,5 +1,5 @@
 class Product {
-  constructor(id, name, description, price, image, onAddToCartHandler) {
+  constructor(id, name, description, price, image) {
     this.id = id;
     this.name = name;
     this.description = description;
@@ -7,7 +7,6 @@ class Product {
     this.image = image;
     this.quantity = 1;
     this.previewElement;
-    this.onAddToCartHandler = onAddToCartHandler;
   }
   //Method
   calculateTotal() {
@@ -48,14 +47,7 @@ class Product {
     const addToCartBtn = document.createElement("button");
     addToCartBtn.innerHTML = "Add to Cart";
     addToCartBtn.addEventListener("click", () => {
-      this.onAddToCartHandler({
-        id: this.id,
-        name: this.name,
-        description: this.description,
-        price: this.price,
-        image: this.image,
-        quantity: this.quantity,
-      });
+      currentUserCart.addCartItem(this);
     });
 
     const cartImg = document.createElement("img");
