@@ -1,11 +1,11 @@
 class Product {
-  constructor(id, name, description, price, image) {
+  constructor(id, name, description, price, image, quantity) {
     this.id = id;
     this.name = name;
     this.description = description;
     this.price = price;
     this.image = image;
-    this.quantity = 1;
+    this.quantity = quantity ? quantity : 0;
     this.previewElement;
     // this.onAddToCartHandler = onAddToCartHandler;
   }
