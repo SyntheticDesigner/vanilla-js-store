@@ -21,3 +21,5 @@ function renderBestSellers() {
 renderBestSellers();
 let test = new Product("test");
 console.log(test);
+
+console.log(currentUserCart.cartItemArray)

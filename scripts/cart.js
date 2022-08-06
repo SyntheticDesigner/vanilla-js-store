@@ -1,7 +1,6 @@
 class Cart {
   constructor() {
     this.cartItems = [];
-    this.cartElement;
   }
   addCartItem(product) {
     if (this.cartItems.length) {
@@ -20,6 +19,7 @@ class Cart {
     } else {
       this.cartItems.push(product);
     }
+    sessionStorage.setItem("cart", JSON.stringify(this.cartItems));
     console.log(this.cartItems);
   }
   get cartItemArray() {

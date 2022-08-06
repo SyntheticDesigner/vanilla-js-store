@@ -11,10 +11,13 @@ class Product {
   //Method
   calculateTotal() {
     let total = this.price * this.quantity;
+    console.log(this.price);
+    console.log(this.quantity);
     return total;
   }
   //Getter
   get total() {
+    console.log("testing this too")
     return this.calculateTotal();
   }
 
